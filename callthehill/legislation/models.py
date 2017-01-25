@@ -74,4 +74,5 @@ class Legislation(models.Model):
     body = models.ForeignKey("Body")
     votes = models.ManyToMany("Vote")
 
-    related_legislation = models.ManyToManyField("self")
+    positively_related_legislation = models.ManyToManyField("self")
+    netatively_relation_legislation = models.ManyToManyField("self")
