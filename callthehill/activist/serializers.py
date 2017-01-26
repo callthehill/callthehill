@@ -13,6 +13,6 @@ class UpdateCardSerializer(serializers.Serializer):
 class ActivistSerializer(serializers.ModelSerializer):
     class Meta:
         model = Activist
-        fields = ("name", "location", "zip_code", "interests", )
-        read_only_fields = ("photo", "user_id", )
+        fields = ("name", "location", "zip_code", "interests", "photo", "id", )
+        read_only_fields = ("photo", "id", )
         

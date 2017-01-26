@@ -12,4 +12,8 @@ class ActivistViewSet(viewsets.ModelViewSet):
 
     queryset = Activist.objects.all()
     serializer_class = ActivistSerializer
-    
+
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+        
