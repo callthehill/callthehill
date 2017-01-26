@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from phonebank.models import Call
+from phonebank.serializers import CallSerializer
 
-# Create your views here.
+
+class CallViewSet(viewsets.ModelViewSet):
+    queryset = Call.objects.all()
+    serializer_class = CallSerializer
