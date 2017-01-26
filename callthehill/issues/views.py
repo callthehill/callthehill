@@ -1,3 +1,11 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from issues.models import *
+from issues.serializers import *
 
-# Create your views here.
+class IssueViewSet(viewsets.ModelViewSet):
+    queryset = Issue.objects.all()
+    serializer_class = IssueSerializer
+
+class TagViewSet(viewsets.ModelViewSet):
+    queryset = Tag.objects.all()
+    serializer_class = TagSerializer
