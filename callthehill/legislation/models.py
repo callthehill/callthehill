@@ -35,7 +35,7 @@ class Pronouns(models.Model):
     sub = models.CharField(max_length=30)
     obj = models.CharField(max_length=30)
     own = models.CharField(max_length=30)
-    ref = models.CharField(max_lenght=30)
+    ref = models.CharField(max_length=30)
 
 class Party(models.Model):
     """
@@ -72,7 +72,7 @@ class Legislation(models.Model):
     reference = models.URLField()
     sponsors = models.ManyToManyField("Legislator")
     body = models.ForeignKey("Body")
-    votes = models.ManyToMany("Vote")
+    votes = models.ManyToManyField("Vote")
 
     positively_related_legislation = models.ManyToManyField("self")
     netatively_relation_legislation = models.ManyToManyField("self")
