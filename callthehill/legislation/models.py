@@ -5,9 +5,9 @@ class Legislator(models.Model):
     """
     A specific legislator
     """
-    gender_options = (('F', "Feminine"),
+    gender_options = (('F', "Female"),
                       ('N', "Nonbinary"),
-                      ('M', "Masculine"))
+                      ('M', "Male"))
     invalid_phone = "Phone number must be in the format +999999999. Up to 15 digits allowed."
 
     phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$', message=invalid_phone)
