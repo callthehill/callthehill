@@ -37,10 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'activist',
-    'issues',
-    'legislation',
-    'phonebank',
+    'activist.apps.ActivistConfig',
+    'issues.apps.IssuesConfig',
+    'legislation.apps.LegislationConfig',
+    'phonebank.apps.PhonebankConfig',
     'rest_framework',
 ]
 
