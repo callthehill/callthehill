@@ -76,3 +76,12 @@ class Legislation(models.Model):
 
     positively_related_legislation = models.ManyToManyField("self")
     netatively_relation_legislation = models.ManyToManyField("self")
+
+class ExternalInformation(models.Model):
+    """
+    Data retrieved from an external API
+    """
+
+    reference = models.URLField()
+    text = models.TextField()
+    updated = models.DateTimeField(auto_now=True)
