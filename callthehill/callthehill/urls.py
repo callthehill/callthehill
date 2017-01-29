@@ -7,5 +7,6 @@ urlpatterns = [
     url(r'^legislation/', include("legislation.urls")),
     url(r'^activist/', include("activist.urls")),
     url(r'^phonebank/', include("phonebank.urls")),
+    url(r'^feed/', include("feed.urls")),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]

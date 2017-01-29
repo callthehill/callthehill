@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'issues.apps.IssuesConfig',
     'legislation.apps.LegislationConfig',
     'phonebank.apps.PhonebankConfig',
+    'feed.apps.FeedConfig',
     'rest_framework',
 ]
 
